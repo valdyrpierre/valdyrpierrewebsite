@@ -6,92 +6,116 @@
     <title>Valdyr Pierre</title>
     <style>
         body {
-            background-color: rgb(124, 123, 168);
             font-family: Arial, sans-serif;
-            color: black;
+            box-sizing: border-box;
+            background-color: rgb(155, 155, 168);
         }
-        .button {
-            background-color: rgb(70, 138, 68);
-            color: black;
-            border-radius: 5px;
+        header, footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        header .nav, footer .social {
+            display: flex;
+            gap: 20px;
+        }
+        header .nav a, footer .social a {
+            color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
+        }
+        main {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        .content {
+            width: 60%;
+            padding: 10px;
+        }
+        .featured-image {
+            width: 20%;
+            padding: 10px;
+        }
+        footer {
+            padding: 10px;
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1><b>Valdyr Pierre</b></h1>
-        <hr>
+        <div class="title"><b>Valdyr Pierre</b></div>
+        <nav class="nav">
+            <a href="https://www.linkedin.com/in/valdyr-pierre-06803a190">LinkedIn</a>
+            <a href="https://github.com/valdyrpierre">github</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="button">Search</button>
+        </div>
     </header>
-    <img src="pfp.jpg" height="100" alt="This is a picture of me">
-    <p>Hello, my name is Valdyr Pierre. I am studying computer science at Curry College and I am a certified translator.</p>
-    <p>I aspire to become a data analyst or software developer, but I am open to exploring other exciting opportunities in the tech field.</p>
-    <p>Based in Stoughton, MA, I am passionate about leveraging technology to solve problems and create innovative solutions.</p>
 
-    <h2><b>Navigation</b></h2>
-    <nav>
-        <a href="#skills" title="This will lead you to my skills section" class="button">Skills</a>
-        <a href="#project" title="This will take you to my projects" class="button">Project</a>
-        <a href="#contact" title="This will take you to my contact info" class="button">Contact</a>
-        <a href="#experience" title="This will take you to my experience" class="button">Experience</a>
-        <a href="#education" title="This will take you to my education" class="button">Education</a>
-    </nav>
+    <main>
+        <aside class="skill">
+            <h2>skill</h2>
+            <ul>
+                <li>Coding Languages: Python, C#, Java, HTML</li>
+                <li>Operating Systems: Linux, Windows, MacOS</li>
+                <li>Cloud Computing: Azure</li>
+                <li>Software: Zoom, Microsoft 365, Excel, Google Workspace</li>
+            </ul>
+        </aside>
 
-    <section id="skills">
-        <h2><b>Skills</b></h2>
-        <ul>
-            <li>Coding Languages: Python, C#, Java, HTML</li>
-            <li>Operating Systems: Linux, Windows, MacOS</li>
-            <li>Cloud Computing: Azure</li>
-            <li>Software: Zoom, Microsoft 365, Excel, Google Workspace</li>
-        </ul>
-    </section>
+        <section class="experience">
+            <h2><b>Experience</b></h2>
+            <p><i><b>Sonic</b></i> - Team Lead (Sep 2020 - Nov 2022)</p>
+            <ul>
+                <li><b>Goal Setting:</b> Established clear daily objectives and priorities for team members, ensuring alignment with overall operational goals and maintaining high productivity levels.</li>
+                <li><b>Task Delegation:</b> Assigned tasks based on individual strengths and workload capacities, optimizing team performance and ensuring efficient completion of duties.</li>
+                <li><b>Problem Solving:</b> Addressed any obstacles or issues hindering progress, implementing corrective actions to keep the team on track.</li>
+            </ul>
+            <p><i><b>Target</b></i> - Inbound Stocker (Nov 2022 - Present)</p>
+            <ul>
+                <li><b>Organize and Display Products:</b> Ensure shelves are fully stocked and neatly organized with a variety of products, enhancing the shopping experience for customers.</li>
+                <li><b>Inventory Management:</b> Regularly conduct stock checks and cycle counts to maintain accurate inventory levels and identify restocking needs.</li>
+                <li><b>Stock Rotation:</b> Apply the FIFO (First In, First Out) method to rotate stock and minimize waste, ensuring that older products are sold first.</li>
+            </ul>
+            <h2><b>Education</b></h2>
+            <p><b>Britannica</b> - Stoughton, MA (Sep 2022) Translator Certification: French and Haitian Creole</p>
+            <p><b>Curry College</b> - Milton, MA (In Progress) Computer Science</p>
+            <p><b>LinkedIn Learning</b> - Online</p>
+            <ul>
+                <li>Python for Data Science</li>
+                <li>Azure Fundamentals</li>
+            </ul>
+        </section>
 
-    <section id="experience">
-        <h2><b>Experience</b></h2>
-        <p><i><b>Sonic</b></i> - Team Lead (Sep 2020 - Nov 2022)</p>
-        <ul>
-            <li><b>Goal Setting:</b> Established clear daily objectives and priorities for team members, ensuring alignment with overall operational goals and maintaining high productivity levels.</li>
-            <li><b>Task Delegation:</b> Assigned tasks based on individual strengths and workload capacities, optimizing team performance and ensuring efficient completion of duties.</li>
-            <li><b>Problem Solving:</b> Addressed any obstacles or issues hindering progress, implementing corrective actions to keep the team on track.</li>
-        </ul>
-        <p><i><b>Target</b></i> - Inbound Stocker (Nov 2022 - Present)</p>
-        <ul>
-            <li><b>Organize and Display Products:</b> Ensure shelves are fully stocked and neatly organized with a variety of products, enhancing the shopping experience for customers.</li>
-            <li><b>Inventory Management:</b> Regularly conduct stock checks and cycle counts to maintain accurate inventory levels and identify restocking needs.</li>
-            <li><b>Stock Rotation:</b> Apply the FIFO (First In, First Out) method to rotate stock and minimize waste, ensuring that older products are sold first.</li>
-        </ul>
-    </section>
+        <aside class="featured-image">
+            <img src="pfp.jpg" alt="ptoject" width="100%">
+            <h2><b>Projects</b></h2>
+            <ol type="1">
+                <li><a href="https://github.com/valdyrpierre/deck-of-card-C-">Deck of Cards (C#)</a>: Object-Oriented, Created a Deck of Cards and Shuffle</li>
+                <li><a href="https://github.com/valdyrpierre/black-jack">Blackjack (C#)</a>: Program that Creates and Shuffles a Deck, and Allows Users to Play Against AI Generated in the Program</li>
+                <li><a href="https://games.washingtonpost.com/games/blackjack">Blackjack (Python)</a>: Program that Creates and Shuffles a Deck, and Allows Users to Play Against AI Generated in the Program</li>
+                <li><a href="https://github.com/valdyrpierre/deck-of-card">Deck of Cards (Java)</a>: Created a Deck of Cards and Shuffle</li>
+                <li><a href="https://github.com/valdyrpierre/income-calculator"> income calculator</a> :calculates annual income based on hourly, weekly, biweekly, or yearly input. </li>
+            </ol>
+        </aside>
 
-    <section id="education">
-        <h2><b>Education</b></h2>
-        <p><b>Britannica</b> - Stoughton, MA (Sep 2022) Translator Certification: French and Haitian Creole</p>
-        <p><b>Curry College</b> - Milton, MA (In Progress) Computer Science</p>
-        <p><b>LinkedIn Learning</b> - Online</p>
-        <ul>
-            <li>Python for Data Science</li>
-            <li>Azure Fundamentals</li>
-        </ul>
-    </section>
+    </main>
 
-    <section id="project">
-        <h2><b>Projects</b></h2>
-        <ol type="1">
-            <li><a href="https://store.theory11.com/collections/playingcards?srsltid=AfmBOoqzQBaCPuTuRu4vQcK6MuVgztH9houjejH7v0uiLQHRl6FRZdip">Deck of Cards (C#)</a>: Object-Oriented, Created a Deck of Cards and Shuffle</li>
-            <li><a href="https://games.washingtonpost.com/games/blackjack">Blackjack (C#)</a>: Program that Creates and Shuffles a Deck, and Allows Users to Play Against AI Generated in the Program</li>
-            <li><a href="https://games.washingtonpost.com/games/blackjack">Blackjack (Python)</a>: Program that Creates and Shuffles a Deck, and Allows Users to Play Against AI Generated in the Program</li>
-            <li><a href="https://store.theory11.com/collections/playingcards?srsltid=AfmBOoqzQBaCPuTuRu4vQcK6MuVgztH9houjejH7v0uiLQHRl6FRZdip">Deck of Cards (Java)</a>: Created a Deck of Cards and Shuffle</li>
-        </ol>
-    </section>
-
-    <section id="contact">
-        <h2><b>Contact</b></h2>
-        <p>Email me: <a href="mailto:vpierre509@gmail.com" target="_blank" title="Email me">vpierre509@gmail.com</a></p>
-        <p>Tel: 774-946-7078</p>
-        <a href="https://www.linkedin.com/in/valdyr-pierre-06803a190" class="button">My LinkedIn Profile</a>
-    </section>
+    <footer>
+        <div class="contact">
+            <p>Email: <a href="mailto:vpierre509@gmail.com">vpierre509@gmail.com</a></p>
+            <p>Phone: 774-946-7078</p>
+        </div>
+    </footer>
 </body>
 </html>
-
