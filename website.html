@@ -1,70 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valdyr Pierre</title>
+    <!-- Metadata about the document -->
+    <meta charset="UTF-8"> <!-- Character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Valdyr Pierre</title> <!-- Title of the webpage -->
+
+    <!-- Internal CSS for styling -->
     <style>
         body {
             font-family: Arial, sans-serif;
             box-sizing: border-box;
-            background-color: rgb(155, 155, 168);
+            background-color: #e0e0e0;
+            margin: 0;
+            padding: 0;
         }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #555;
+            transform: scale(1.05);
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+        }
+
         header, footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background-color: #333;
+            padding: 20px;
+            background-color: #000000;
             color: white;
         }
+
         header .nav, footer .social {
             display: flex;
             gap: 20px;
         }
+
         header .nav a, footer .social a {
             color: white;
             text-decoration: none;
         }
+
         main {
             display: flex;
+            padding: 20px;
         }
+
         .sidebar {
-            width: 20%;
-            padding: 10px;
+            width: 25%;
+            padding: 20px;
             background-color: #f2f2f2;
+            margin-right: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .content {
-            width: 60%;
-            padding: 10px;
+            width: 55%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         .featured-image {
             width: 20%;
-            padding: 10px;
+            padding: 20px;
         }
+
+        .featured-image img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             padding: 10px;
             background-color: #333;
             color: white;
         }
+
+        footer .contact {
+            margin-top: 10px;
+        }
+
+        footer .contact p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
+    <!-- Header section with navigation -->
     <header>
-        <div class="title"><b>Valdyr Pierre</b></div>
+        <div class="title">
+            <b>Valdyr Pierre</b>
+            <img src="pfp.jpg" alt="profile picture" width="60px" height="60px" style="border-radius: 50%;">
+        </div>
         <nav class="nav">
             <a href="https://www.linkedin.com/in/valdyr-pierre-06803a190">LinkedIn</a>
-            <a href="https://github.com/valdyrpierre">github</a>
+            <a href="https://github.com/valdyrpierre">Github</a>
+            <a href="form.html">feedback/question form</a>
         </nav>
         <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="button">Search</button>
+            <input type="text" placeholder="Search..." style="padding: 5px;">
+            <button type="button" style="padding: 5px;">Search</button>
         </div>
     </header>
 
+    <!-- Main content section with sidebar and content -->
     <main>
-        <aside class="skill">
-            <h2>skill</h2>
+        <aside class="sidebar">
+            <!-- Sidebar with skills -->
+            <h2>Skills</h2>
             <ul>
                 <li>Coding Languages: Python, C#, Java, HTML</li>
                 <li>Operating Systems: Linux, Windows, MacOS</li>
@@ -73,7 +132,8 @@
             </ul>
         </aside>
 
-        <section class="experience">
+        <section class="content">
+            <!-- Experience section -->
             <h2><b>Experience</b></h2>
             <p><i><b>Sonic</b></i> - Team Lead (Sep 2020 - Nov 2022)</p>
             <ul>
@@ -88,33 +148,60 @@
                 <li><b>Stock Rotation:</b> Apply the FIFO (First In, First Out) method to rotate stock and minimize waste, ensuring that older products are sold first.</li>
             </ul>
             <h2><b>Education</b></h2>
-            <p><b>Britannica</b> - Stoughton, MA (Sep 2022) Translator Certification: French and Haitian Creole</p>
+            <p><b>Stoughton High School</b> - High School Diploma</p>
             <p><b>Curry College</b> - Milton, MA (In Progress) Computer Science</p>
-            <p><b>LinkedIn Learning</b> - Online</p>
-            <ul>
-                <li>Python for Data Science</li>
-                <li>Azure Fundamentals</li>
-            </ul>
+        </section>
+
+        <section class="certification">
+            <!-- Certification section with table -->
+            <h2>Certification</h2>
+            <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <tr>
+                    <th>Certification</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td>Python for Data Science</td>
+                    <td>LinkedIn Learning</td>
+                </tr>
+                <tr>
+                    <td>Azure Fundamentals</td>
+                    <td>LinkedIn Learning</td>
+                </tr>
+                <tr>
+                    <td>Translator (French)</td>
+                    <td>Britannica</td>
+                </tr>
+                <tr>
+                    <td>Translator (Haitian Creole)</td>
+                    <td>Britannica</td>
+                </tr>
+            </table>
         </section>
 
         <aside class="featured-image">
-            <img src="pfp.jpg" alt="ptoject" width="100%">
+            <!-- Featured image section -->
             <h2><b>Projects</b></h2>
             <ol type="1">
                 <li><a href="https://github.com/valdyrpierre/deck-of-card-C-">Deck of Cards (C#)</a>: Object-Oriented, Created a Deck of Cards and Shuffle</li>
                 <li><a href="https://github.com/valdyrpierre/black-jack">Blackjack (C#)</a>: Program that Creates and Shuffles a Deck, and Allows Users to Play Against AI Generated in the Program</li>
                 <li><a href="https://games.washingtonpost.com/games/blackjack">Blackjack (Python)</a>: Program that Creates and Shuffles a Deck, and Allows Users to Play Against AI Generated in the Program</li>
                 <li><a href="https://github.com/valdyrpierre/deck-of-card">Deck of Cards (Java)</a>: Created a Deck of Cards and Shuffle</li>
-                <li><a href="https://github.com/valdyrpierre/income-calculator"> income calculator</a> :calculates annual income based on hourly, weekly, biweekly, or yearly input. </li>
-            </ol>
+                <li><a href="https://github.com/valdyrpierre/income-calculator">Income Calculator</a>: Calculates annual income based on hourly, weekly, biweekly, or yearly input.</li>
+                <li><a href="https://valdyrpierre.github.io/e-calculator-/assigmentiv.html">Calculator(html)</a> This file contains the HTML, CSS, and JavaScript code for a simple web-based calculator application.</li>
         </aside>
-
     </main>
 
+    <!-- Footer section with contact information -->
     <footer>
+        <!-- Styled download button -->
+        <button>
+            <a href="Copy of good resume .docx.pdf">Download My Resume</a>
+        </button>
         <div class="contact">
             <p>Email: <a href="mailto:vpierre509@gmail.com">vpierre509@gmail.com</a></p>
             <p>Phone: 774-946-7078</p>
+            <p>Thank you for taking your time visiting my website. If you have any questions or feedback, please fill out this form, and I will reach out to you as soon as I can.</p>
         </div>
     </footer>
 </body>
