@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Defines the document type and language as English -->
+<head>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <title>Feedback Form</title> <!-- Title of the webpage -->
+    <style>
+        /* CSS styling for the document */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font family for the document */
+            background-color: #f0f0f0; /* Sets the background color for the document */
+            margin: 0; /* Removes default margin */
+            padding: 20px; /* Adds padding around the body */
+        }
+        form {
+            background-color: #3f6788; /* Sets background color of the form */
+            padding: 20px; /* Adds padding inside the form */
+            border-radius: 8px; /* Rounds the corners of the form */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the form */
+            max-width: 600px; /* Sets the maximum width of the form */
+            margin: auto; /* Centers the form on the page */
+        }
+        label, input, select, textarea {
+            width: 100%; /* Sets the width of elements to 100% */
+            margin-bottom: 15px; /* Adds space below each element */
+        }
+        input[type="radio"] {
+            display: inline-block; /* Makes radio buttons inline-block elements */
+            margin-right: 10px; /* Adds space to the right of radio buttons */
+        }
+        .buttons {
+            display: flex; /* Uses flexbox to layout buttons */
+            justify-content: space-between; /* Distributes space between buttons */
+        }
+        button {
+            padding: 10px 15px; /* Adds padding inside buttons */
+            border: none; /* Removes default border */
+            border-radius: 5px; /* Rounds the corners of buttons */
+            background-color: #007BFF; /* Sets background color of buttons */
+            color: white; 
+            cursor: pointer; /* Changes cursor to pointer when hovering over buttons */
+        }
+        button[type="reset"] {
+            background-color: #6c757d; /* Sets background color for reset button */
+        }
+    </style>
+    <script>
+        alert("i am working on the form to  make sure i reciece them plaese reach out to me on linkin or email if you have queastion or feedback")
+    </script>
+</head>
+<body>
+    <form action="feedback"> <!-- Form action URL -->
+        <label for="con">Are you giving feedback or do you have a question?</label>
+        <select name="feedback/question" id="con"> 
+            <option value="question">Question</option> 
+            <option value="feedback">Feedback</option> 
+        </select>
+
+        <input type="email" name="email" placeholder="Please enter your email"> 
+        <input type="text" name="first_name" placeholder="First Name"> 
+        <input type="text" name="last_name" placeholder="Last Name"> 
+
+        <label>
+            <input type="radio" id="anonymous" name="share_info" value="anonymous"> <!-- Radio button for anonymous option -->
+            Anonymous
+        </label>
+
+        <textarea name="message" rows="4" cols="50" placeholder="Write your feedback/question here..."></textarea> 
+
+        <div class="buttons">
+            <button type="submit">Submit</button> <!-- Submit button -->
+            <button type="reset">Reset</button> <!-- Reset button -->
+        </div>
+    </form>
+</body>
+</html>
